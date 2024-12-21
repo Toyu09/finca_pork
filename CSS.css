@@ -1,0 +1,110 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f7f3;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #0066cc; /* Azul */
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Input Section */
+.date-input, .actions, .filter {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.date-input label, .filter input {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.date-input input, .filter input {
+    padding: 10px;
+    width: 250px;
+    max-width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.actions button {
+    background-color: #009933; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.actions button:hover {
+    background-color: #007a29; /* Verde más oscuro */
+}
+
+.actions input {
+    margin-left: 10px;
+}
+
+/* Table Container */
+.table-container {
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0066cc; /* Azul */
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #eaf4e9; /* Verde claro */
+}
+
+td[contenteditable="true"] {
+    background-color: #eaf4e9; /* Verde claro */
+    border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

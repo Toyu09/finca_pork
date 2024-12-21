@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Sanitario</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+    <header>
+        <h1>Plan Sanitario - Hembras de Reemplazo</h1>
+    </header>
+
+    <div class="date-input">
+        <label for="birthDate">Fecha de Nacimiento:</label>
+        <input type="date" id="birthDate" onchange="updateVaccinationDates()">
+    </div>
+
+    <div class="actions">
+        <button onclick="saveToExcel()">Guardar Configuración</button>
+        <input type="file" id="fileInput" accept=".xlsx, .xls" onchange="loadTable(event)">
+    </div>
+
+    <div class="filter">
+        <input type="text" id="searchInput" placeholder="Buscar en la tabla..." onkeyup="filterTable()">
+    </div>
+
+    <div class="table-container">
+        <table id="planTable">
+            <thead>
+                <tr>
+                    <th>#Cerda</th>
+                    <th>Vacuna/Evento</th>
+                    <th>Días desde Nacimiento</th>
+                    <th>Fecha de Vacunación</th>
+                    <th>Fecha de Vacunación REAL</th>
+                    <th>Observación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">Micoplasma</td>
+                    <td contenteditable="true">130</td>
+                    <td contenteditable="false">-</td>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">-</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">Vermífugo / PPC</td>
+                    <td contenteditable="true">135</td>
+                    <td contenteditable="false">-</td>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">-</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">Estomatitis Vesicular</td>
+                    <td contenteditable="true">150</td>
+                    <td contenteditable="false">-</td>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">-</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">Micoplasma / Circovirus</td>
+                    <td contenteditable="true">171</td>
+                    <td contenteditable="false">-</td>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">-</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">Parvo / Lepto / Erisipela</td>
+                    <td contenteditable="true">175</td>
+                    <td contenteditable="false">-</td>
+                    <td contenteditable="true">-</td>
+                    <td contenteditable="true">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Biblioteca SheetJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="JAVASCRIPT.js"></script>
+</body>
+</html>
